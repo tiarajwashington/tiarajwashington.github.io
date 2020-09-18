@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Amortization</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+  <script src="scripts/jquery-1.8.3.min.js">
+  </script>
+  <script src="scripts/jquery.mobile-1.3.1.min.js">
+  </script>
+  <script type='text/javascript' src='scripts/function.js'>
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<h2>Loan Amortization Calculator</h2>
+<p>
+  Enter your values to see an amortization estimate.
+</p>
+<label>Principal Amount</label>
+<input id="principal" type="text" placeholder="Principal Amount"><br>
+
+<label>Interest Rate</label>
+<input id="interest" type="text" placeholder="Interest Rate"><br>
+
+<label>Term (in months)</label>
+<input id="months" type="text" placeholder="Term (in months)"><br>
+<button id="btn_calculate">Calculate</button>
+<button id="btn_default">Default Values</button>
+
+<table id="tbl_result" class="hide">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Principal</th>
+      <th>Interest</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody id="tbl_body">
+  </tbody>
+</table>
+
+</html>
+
