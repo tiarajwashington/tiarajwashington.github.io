@@ -9,17 +9,15 @@ function commitData() {
   var loopNum;
   var tagNum;
   var tagNam;
-  // Render the display tables to echo the user input
+  
   document.write("<table>");
   document.write("<tr><td><table id='datTab'>");
-  document.write("<tr><td id='namLab'>Borrower Name: </td><td id='flname'></td></tr>");
   document.write("<tr><td id='amtLab'>Loan Amount: </td><td id='lamount'></td></tr>");
   document.write("<tr><td id='intLab'>Interest Rate: </td><td id='irate'></td></tr>");
   document.write("<tr><td id='numLab'>Number of Payments:   </td><td id='numPmt'></td></tr>");
   document.write("<tr><td id='monLab'>Monthly Payment: </td><td id='monPmt'></td></tr>");
   document.write("</table></td>");      
-  // Render the amortization table, this table displays the number of
-  // rows specified by the number of payments input by the user in the numPay field.
+  
   document.write("<td><table border="+"1"+" id='pmtTab'><tr style='background-color:DeepSkyBlue'><td id='numHead'>Payment Number</td><td id='oldBal'>Previous Balance</td><td id='pt'>Payment</td><td id='oil'>Interest Paid</td><td id='newBal'>New Balance</td><td id='til'>Total Interest</td></tr>");
   for(var i=1;i<=numPay;i++) {
     loopNum=i;
@@ -36,10 +34,10 @@ function commitData() {
     tagNam="ti"+loopNum.toString(10);
     document.write("<td id="+tagNam+"></td></tr>");
   }
-  // This statement outside the loop completes the table
+  
   document.write("</table></td></tr></table>");
-  // Echo the input in the display table using the displayTableField() function
-  displayTableField("flname",loanName);
+  
+  
   displayTableField("lamount",loanAmount);
   displayTableField("irate",intRate);
   displayTableField("numPmt",numPay);
