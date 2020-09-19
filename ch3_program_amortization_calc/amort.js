@@ -1,5 +1,5 @@
 function commitData() {
-  // Declair and initialize the variables
+  
   var eleId;
   var eleDat;
   var loanName=document.form1.name.value;
@@ -22,7 +22,7 @@ function commitData() {
   for(var i=1;i<=numPay;i++) {
     loopNum=i;
     tagNam="n"+loopNum.toString(10);
-    document.write("<tr style='background-color:LightSkyBlue'><td id=tagNam>"+i+"</td>");
+    document.write("<tr style='background-color:yellow'><td id=tagNam>"+i+"</td>");
     tagNam="b"+loopNum.toString(10);
     document.write("<td id="+tagNam+"></td>");
     tagNam="p"+loopNum.toString(10);
@@ -41,10 +41,10 @@ function commitData() {
   displayTableField("lamount",loanAmount);
   displayTableField("irate",intRate);
   displayTableField("numPmt",numPay);
-  //Calculate and display the monthly payment amount
+  
   var monPmt=calcMonthly(loanAmount,numPay,intRate);
   displayTableField("monPmt",monPmt);
-  // Call the amortization routine
+  
   amortizePmts(loanAmount,intRate,numPay,monPmt);
   return;
 }
@@ -58,13 +58,13 @@ function amortizePmts(loanAmount,intRate,numPay,monPmt) {
   var totalInterestPd=0;
   var tagNam;
   var dispInt
-  // The for loop performs the amortization
+  
   for(var i=1;i<=numPay;i++) {
     var loopNum=i;
     owedInterest=newBalance*intRate;
     dispInt=twoDecimal(owedInterest);
     totalInterestPd=totalInterestPd+owedInterest;
-    // Test for the final payment
+    
     if (i<numPay) {
       monthly=twoDecimal(monPmt-dispInt);
       oldBalance=newBalance;
@@ -99,9 +99,7 @@ function calcMonthly(principal,numPay,intRate) {
   var monthly;
   var intRate=(intRate/100)/12;
   var principal;
-  // The accounting formula to calculate the monthly payment is
-  //    M = P * ((I + 1)^N) * I / (((I + 1)^N)-1)
-  // The following code  transforms this accounting formula into JavaScript to calculate the monthly payment
+  
   monthly=(principal*(Math.pow((1+intRate),numPay))*intRate/(Math.pow((1+intRate),numPay)-1));
   return twoDecimal(monthly);
 }
