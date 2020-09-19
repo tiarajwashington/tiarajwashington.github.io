@@ -18,7 +18,7 @@ function commitData() {
   document.write("<tr><td id='monLab'>Monthly Payment: </td><td id='monPmt'></td></tr>");
   document.write("</table></td>");      
   
-  document.write("<td><table border="+"1"+" id='pmtTab'><tr style='background-color:DeepSkyBlue'><td id='numHead'>Payment Number</td><td id='oldBal'>Previous Balance</td><td id='pt'>Payment</td><td id='oil'>Interest Paid</td><td id='newBal'>New Balance</td><td id='til'>Total Interest</td></tr>");
+  document.write("<td><table border="+"1"+" id='pmtTab'><tr style='background-color:blue'><td id='numHead'>Payment Number</td><td id='oldBal'>Previous Balance</td><td id='pt'>Payment</td><td id='oil'>Interest Paid</td><td id='newBal'>New Balance</td><td id='til'>Total Interest</td></tr>");
   for(var i=1;i<=numPay;i++) {
     loopNum=i;
     tagNam="n"+loopNum.toString(10);
