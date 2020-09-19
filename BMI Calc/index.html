@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en manifest="manifest.appcache">
 
 <head>
   <title>Thyroid Cancer Aide</title>
@@ -18,7 +18,67 @@
 </head>
 
 <body>
-  
+  <!-- Start of first page -->
+  <div data-role="page" id="pageHome">
+    <div data-role="header">
+      <h1>Thyroid Cancer Aide</h1>
+    </div>
+    <div data-role="content">
+      Password :
+      <input type="password" id="passcode"></input>
+
+      <div data-role="controlgroup" id="numKeyPad">
+        <a data-role="button" id="btnEnter" type="submit">Enter</a>
+        <a href="#pageAbout" data-role="button">About</a>
+      </div>
+      <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" onclick="addValueToPassword(7)">7</a>
+        <a data-role="button" onclick="addValueToPassword(8)">8</a>
+        <a data-role="button" onclick="addValueToPassword(9)">9</a>
+      </div>
+      <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" onclick="addValueToPassword(4)">4</a>
+        <a data-role="button" onclick="addValueToPassword(5)">5</a>
+        <a data-role="button" onclick="addValueToPassword(6)">6</a>
+      </div>
+      <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" onclick="addValueToPassword(1)">1</a>
+        <a data-role="button" onclick="addValueToPassword(2)">2</a>
+        <a data-role="button" onclick="addValueToPassword(3)">3</a>
+      </div>
+      <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" onclick="addValueToPassword(0)">0</a>
+        <a data-role="button" onclick="addValueToPassword('bksp')"
+        data-icon="delete">del</a>
+      </div>
+    </div>
+  </div>
+
+  <!--Disclaimer Page -->
+  <div data-role="page" id="legalNotice" data-close-btn="none">
+    <div data-role="header">
+      <h1>Disclaimer</h1>
+    </div>
+    <div data-role="content">
+      [Insert Disclaimer Text Here]
+      <br>
+      <a href="#pageUserInfo" id="noticeYes" data-role="button"
+      data-icon="forward" data-mini="false">Yes</a>
+    </div>
+  </div>
+
+  <!--About Page -->
+  <div data-role="page" id="pageAbout">
+    <div data-role="header">
+      <a href="#pageHome" data-role="button" data-icon="bars"
+      data-iconpos="left">Home</a>
+      <h1>Info</h1>
+    </div>
+    <div data-role="content">
+      [Help and/or Website explanation/information should
+      go here]
+    </div>
+  </div>
 
   <!--User Information Page/Form -->
   <div data-role="page" id="pageUserInfo">
@@ -240,5 +300,4 @@
   <script src="scripts/GraphAnimate.js"></script>
   <script src="scripts/pageLoader.js"></script>
 </body>
-
 </html>
