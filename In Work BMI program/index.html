@@ -16,8 +16,7 @@
     </div>
     <div data-role="content">
       Password :
-      <input type="password" id="passcode"></input>
-
+      <input type="password" id="passcode"> 
       <div data-role="controlgroup" id="numKeyPad">
         <a data-role="button" id="btnEnter" type="submit">Enter</a>
         <a href="#pageAbout" data-role="button">About</a>
@@ -50,7 +49,11 @@
       <h1>Disclaimer</h1>
     </div>
     <div data-role="content">
-      <p>Because this website deals with issues of a health related nature, we hereby state that the Calculators, Formulas, Charts and other calculations do not offer medical advice. Readers should seek medical advice from a licensed physician and not rely solely on information they may gather from secondary sources such as the Internet. The Calculators cannot be held responsible for the validity of the information contained in any reference noted herein, nor for the misuse of information or any adverse effects from use of any stated materials presented herein. Content at the Calculators is intended to offer factual, up to date information on the subjects discussed, but in no way should it be regarded as a complete analysis of these subjects. Physicians and other medical professionals should be consulted prior to implementing any items presented. No party associated in any way with this site or its content assumes liability for any loss or damage resulting from the use or misuse of any information contained herein or for any errors or omissions.</p>
+      <p align="center">Please use this site at your own risk. The calculators, graphs and suggestions displayed <br>
+         are not from a licensed physician and do not offer professional medical advice. Seek <br>
+         medical attention from a professional licensed physician if real health concerns occur. <br>
+         The content on this site is only inteded to offer factual information on the data entered, <br>
+         and will not be held responsible. Thank You</p>
       <br>
       <a href="#pageUserInfo" id="noticeYes" data-role="button" data-icon="forward" data-mini="false">Yes</a>
     </div>
@@ -62,7 +65,11 @@
       <h1>Info</h1>
     </div>
     <div data-role="content">
-      <p>BMI is an estimate of body fat and a good measure of your patients' risk for diseases that can occur with overweight and obesity. For adults, a healthy weight is defined as the appropriate body weight in relation to height. This ratio of weight to height is known as the body mass index (BMI). People who are overweight (BMI of 25–29.9) have too much body weight for their height. People who are obese (BMI of 30 or above) almost always have a large amount of body fat in relation to their height. The higher the BMI, the higher the risk for heart disease, high blood pressure, type 2 diabetes, gallstones, osteoarthritis, sleep apnea, and certain cancers (e.g., colon, breast, endometrial, and gallbladder).<br>Although BMI can be used for most men and women, it does have some limits:(1)It may overestimate body fat in athletes and others who have a muscular build. (2) It may underestimate body fat in older persons and others who have lost muscle.<br> The BMI Calculator is an easy-to-use online tool to help you estimate your adult patients' body fat. The BMI calculator uses Standard or Metric measures.</p>
+      <p align="center">This online BMI calculator offers the ability to estimate your Body Mass Idex, also known <br>
+         as your body fat. BMI is an estimate of your body fat. A BMI from 25 to 29.9 is considered <br>
+         overweight. The higher your BMI, the higher risk for heart disease, high blood pressure, type <br>
+         2 diabetes, gallstones, osteoarthritis, sleep apnea, and certain cancers. In addition to the BMI <br> 
+         calculator, we offer a graph and suggestions to help you lower your BMI.</p>
     </div>
   </div>
 
@@ -77,14 +84,12 @@
         <div data-role="fieldcontain">
           <label for="txtFirstName">First Name: </label>
           <input type="text" placeholder="First Name" name="txtFirstName"
-          data-mini="false" id="txtFirstName" value=""
-          required>
+          data-mini="false" id="txtFirstName" value="" required="">
         </div>
         <div data-role="fieldcontain">
           <label for="txtLastName">Last Name: </label>
           <input type="text" placeholder="Last Name" name="txtLastName"
-          data-mini="false" id="txtLastName" value=""
-          required>
+          data-mini="false" id="txtLastName" value="" required="">
         </div>
         <div data-role="fieldcontain">
           <label for="datBirthdate">Birthdate: </label>
@@ -94,39 +99,26 @@
         <div data-role="fieldcontain">
           <label for="changePassword">Edit Password: </label>
           <input type="password" placeholder="New Password" name="changePassword"
-          data-mini="false" id="changePassword" value=""
-          required>
+          data-mini="false" id="changePassword" value="" required="">
         </div>
         <div data-role="fieldcontain">
           <label for="txtHealthCardNumber">Health Card Number: </label>
           <input type="text" placeholder="Health Card Number"
           name="txtHealthCardNumber" data-mini="false"
-          id="txtHealthCardNumber" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtHeight">Height in Inches: </label>
-          <input type="text" placeholder="Height"
-          name="txtHeight" data-mini="false"
-          id="txtHeight" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtWeight">Weight in Pounds: </label>
-          <input type="text" placeholder="Weight"
-          name="txtWeight" data-mini="false"
-          id="txtWeight" value="" required>
+          id="txtHealthCardNumber" value="" required="">
         </div>
         <input type="submit" id="btnUserUpdate" data-icon="check"
         data-iconpos="left" value="Update" data-inline="true">
       </form>
+    </div>
   </div>
-</div>
 
   <div data-role="page" id="pageMenu">
     <div data-role="header">
       <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
       <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
       <h1>Body Mass Index</h1>
-    </div>
+    </div>           
     <div data-role="content">
       <div data-role="controlgroup">
         <a href="#pageUserInfo" data-role="button">User Info</a>
@@ -154,22 +146,63 @@
         </table>
       </div>
       <div data-role="fieldcontain">
-        <a href="#pageNewRecordForm" id="btnAddRecord" data-role="button"
-        data-icon="plus">Add New Entry</a>
-        <a href="#" data-role="button" id="btnClearHistory"
-        data-icon="delete">Clear History</a>
+        <a href="#pageNewRecordForm" id="btnAddRecord" data-role="button" data-icon="plus">Add New Entry</a>
+        <a href="#" data-role="button" id="btnClearHistory" data-icon="delete">Clear History</a>
       </div>
     </div>
   </div>
 
-  <div data-role="page" id="pageGraph">
+  <div data-role="page" id="pageNewRecordForm">
     <div data-role="header">
       <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
       <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
-      <h1>Analyze Graph</h1>
+
+      <h1>New Record</h1>
     </div>
     <div data-role="content">
-      <p>This section will be completed in Week 6. Please hit "Menu" on top left to return to the menu page.</p>
+      <form id="frmNewRecordForm" action="" name="frmNewRecordForm">
+        <div data-role="fieldcontain">
+          <div data-role="fieldcontain">
+            <label for="datExamDate">Date: </label>
+            <input type="date" name="datExamDate" data-mini="false" id="datExamDate" value="">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="txtHeight">Height: </label>
+            <input type="text" placeholder="Your Height (Inches)*" name="txtHeight" data-mini="false" id="txtHeight" value="">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="txtWeight">Weight: </label>
+            <input type="text" placeholder="Your Weight (lbs)*" name="txtWeight" data-mini="false" id="txtWeight" value="">
+          </div>
+
+<div>
+        <input class="button" type="button" value="Calculate BMI" onClick="calculateBMI()">
+    </div>
+
+          <div data-role="fieldcontain">
+            <label for="bmi">BMI: </label>
+            <input class="text" placeholder="Your BMI results" type="text" name="bmi" id="bmi" data-mini="false">
+          </div>
+        </div>
+        <input type="submit" id="btnSubmitRecord" value="">
+      </form>
+    </div>
+  </div>
+
+  <div data-role="page" id="pageGraph" class="test">
+    <div data-role="header">
+      <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
+      <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
+      <h1>Analyze</h1>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">BMI vs Date</h3>
+      </div>
+      <div class="panel-body">
+        <canvas id="GraphCanvas" width="500" height="500" style="border:1px solid #000000;">
+        </canvas>
+      </div>
     </div>
   </div>
 
@@ -180,22 +213,25 @@
       <h1>Suggestions</h1>
     </div>
     <div data-role="content">
-      <p>This section will be completed in Week 6. Please hit "Menu" on top left to return to the menu page.</p>
+      <canvas id="AdviceCanvas" width="550" height="550"
+      style="border:1px solid #000000;">
+      </canvas>
     </div>
   </div>
 
-<script src="scripts/RGraph.common.core.js"></script>
-  <script src="scripts/RGraph.common.effects.js"></script>
-  <script src="scripts/RGraph.line.js"></script>
-  <script src="scripts/RGraph.cornergauge.js"></script>
-  <script src="scripts/RGraph.hprogress.js"></script>
+  <script src="./scripts/RGraph.common.core.js"></script>
+  <script src="./scripts/RGraph.common.effects.js"></script>
+  <script src="./scripts/RGraph.line.js"></script>
+  <script src="./scripts/RGraph.cornergauge.js"></script>
+  <script src="./scripts/RGraph.hprogress.js"></script>                                                  
 
-  <script src="scripts/UserForm.js"></script>
-  <script src="scripts/Table.js"></script>
-  <script src="scripts/Navigation.js"></script>
-  <script src="scripts/Advice.js"></script>
-  <script src="scripts/GraphAnimate.js"></script>
-  <script src="scripts/pageLoader.js"></script>
+  <script src="./scripts/UserForm.js"></script>
+  <script src="./scripts/Table.js"></script>
+  <script src="./scripts/Navigation.js"></script>
+  <script src="./scripts/Advice.js"></script>
+  <script src="./scripts/GraphAnimate.js"></script>
+  <script src="./scripts/pageLoader.js"></script>
+  <script src="./scripts/BMIcalc.js"></script>
 
 </body>
 </html>

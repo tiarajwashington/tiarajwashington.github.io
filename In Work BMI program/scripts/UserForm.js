@@ -22,10 +22,7 @@ function checkUserForm() { //Check for empty fields in the form
     ($("#txtLastName").val() != "") &&
     ($("#txtHealthCardNumber").val() != "") &&
     ($("#datBirthdate").val() != "") && ($(
-      "#datBirthdate").val() <= currentDate) &&
-    ($("#txtHeight").val() != "") &&
-    ($("#txtWeigt").val() != "") &&
- {
+      "#datBirthdate").val() <= currentDate)) {
     return true;
   } else {
     return false;
@@ -40,11 +37,7 @@ function saveUserForm() {
       "HealthCardNumber": $(
         "#txtHealthCardNumber").val(),
       "NewPassword": $("#changePassword").val(),
-      "DOB": $("#datBirthdate").val(),
-      "Height": $(
-        "#txtHeight").val(),
-     "Weight": $(
-        "#txtWeight").val(),
+      "DOB": $("#datBirthdate").val()
     };
 
     try {
@@ -80,15 +73,6 @@ function saveUserForm() {
 function clearUserForm() {
   localStorage.removeItem("user");
   alert("The stored data have been removed");
-  $("#slcCancerStage").val(
-    "Select Cancer Stage");
-  $('#slcCancerStage').selectmenu('refresh',
-    true);
-  $("#slcCancerType").val("Select Cancer Type");
-  $('#slcCancerType').selectmenu('refresh',
-    true);
-  $("#slcTSHRange").val("Select TSH Range");
-  $('#slcTSHRange').selectmenu('refresh', true);
 }
 
 function showUserForm() { //Load the stored values in the form
@@ -119,20 +103,5 @@ function showUserForm() { //Load the stored values in the form
     $("#txtHealthCardNumber").val(user.HealthCardNumber);
     $("#changePassword").val(user.NewPassword);
     $("#datBirthdate").val(user.DOB);
-    $("#txtHeight").val(user.Height);
-    $("#txtWeight").val(user.Weight);
-    $('#slcCancerType').selectmenu('refresh',
-      true);
-    $('#slcCancerStage option[value=' + user.CancerStage +
-      ']').attr('selected', 'selected');
-    $("#slcCancerStage option:selected").val(
-      user.CancerStage);
-    $('#slcCancerStage').selectmenu('refresh',
-      true);
-    $('#slcTSHRange option[value=' + user.TSHRange +
-      ']').attr('selected', 'selected');
-    $("#slcTSHRange option:selected").val(user.TSHRange);
-    $('#slcTSHRange').selectmenu('refresh',
-      true);
   }
 }
